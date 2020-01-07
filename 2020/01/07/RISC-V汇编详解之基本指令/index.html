@@ -198,6 +198,8 @@
 </ul>
 <hr>
 <p><strong><em>以下我们以32位字长为例</em></strong></p>
+<a id="more"></a>
+
 <h3 id="RISC-V处理器存储结构"><a href="#RISC-V处理器存储结构" class="headerlink" title="RISC-V处理器存储结构"></a>RISC-V处理器存储结构</h3><ul>
 <li><strong>寄存器</strong><ul>
 <li>32个通用寄存器</li>
@@ -259,7 +261,7 @@
 <td>sll，srl，sra</td>
 </tr>
 </tbody></table>
-<p>  ps:    slt  set less than </p>
+<p>  ps:  slt  set less than </p>
 <pre><code>  sltu  set less than unsigned
 sll     shift left logical
 srl     shift right logical
@@ -280,7 +282,10 @@ sra  shift right arithmetic</code></pre><p>e.g. </p>
 <li><p>R-I指令（Register-Immediate）<br>源操作数分别来自寄存器中的数值和一个小的常数（这个常数）</p>
 <ul>
 <li>格式：oper dest，src1，const<ul>
-<li>addi x3，x1 ，3<br>  -x1 + 3 —&gt; x3</li>
+<li>addi x3，x1 ，3<ul>
+<li>x1 + 3 —&gt; x3</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -309,10 +314,12 @@ sra  shift right arithmetic</code></pre><p>e.g. </p>
 </li>
 <li><p>复杂的组合运算</p>
 <ul>
-<li>将复杂的表达式拆解成基本的R-R和R-I指令</li>
+<li>将复杂的表达式拆解成基本的R-R和R-I指令  </li>
 </ul>
-<p><strong>2.控制流指令</strong></p>
 </li>
+</ul>
+<p> <strong>2.控制流指令</strong></p>
+<ul>
 <li><p><strong>条件跳转指令</strong></p>
 <ul>
 <li>格式：comp src1，src2，label<ul>
@@ -343,12 +350,8 @@ sra  shift right arithmetic</code></pre><p>e.g. </p>
 <td>&gt;=</td>
 </tr>
 </tbody></table>
-<p>  if(a&lt;b): c = a + 1</p>
-<pre><code>else : c = b + 2
-
-bge x1 , x2 , else
-addi x3, x1 , 1 
-beq x0 , x0 , end</code></pre><p>  else:    addi x3, x2, 2<br>  end:</p>
+<p>  if(a&lt;b): c = a + 1<br>  else : c = b + 2</p>
+<p>  bge x1 , x2 , else<br>  addi x3, x1 , 1<br>  beq x0 , x0 , end<br>  else:    addi x3, x2, 2<br>  end:</p>
 </li>
 <li><p>注解：以上分别为python条件语句与生成的对应的汇编代码。 我们假设寄存器x1存储a，x2存储b，x3存储c。汇编代码第三行beq，在x1 &lt; x2情形下，总是会执行，因为 x0 == x0总成立，此行的作用是跳过else分支，直接跳转到end处。</p>
 </li>
@@ -400,8 +403,8 @@ x3 -&gt; store(0x10)</code></pre><p><img src="../../../../img/2.png" alt=""></p>
 </li>
 <li><p>偏移量为常数</p>
 </li>
-<li><p>指令格式：<br>lw dest，offset（base）   </p>
-<pre><code>sw src，offset（base）</code></pre><p>  a = b + c</p>
+<li><p>指令格式：<br>lw dest，offset（base）<br>sw src，offset（base）</p>
+<p>  a = b + c</p>
 <p>  lw x1, 0x4(x0)<br>  lw x2, 0x8(x0)<br>  add x3, x1, x2<br>  sw x3, 0x10(x0)</p>
 </li>
 </ul>
