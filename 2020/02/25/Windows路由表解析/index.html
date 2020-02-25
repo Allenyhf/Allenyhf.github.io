@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Alen&#39;s Blog"/>
+        <meta property="og:title" content="Windows路由表解析"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -47,7 +47,7 @@
 
     <!-- Title -->
     
-    <title>Alen&#39;s Blog</title>
+    <title>Windows路由表解析 - Alen&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -144,17 +144,14 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">Alen's Blog</h1>
-        
     </div>
 </header>
 
         <section class="main">
             
-                
 <div class="post">
 
-    <div class="post-header index">
+    <div class="post-header">
         <h1 class="title">
             <a href="/2020/02/25/Windows%E8%B7%AF%E7%94%B1%E8%A1%A8%E8%A7%A3%E6%9E%90/">
                 Windows路由表解析
@@ -169,9 +166,13 @@
         </div>
     </div>
 
-    
-        <div class="content">
-            <h1 id="Windows路由表解析"><a href="#Windows路由表解析" class="headerlink" title="Windows路由表解析"></a>Windows路由表解析</h1><blockquote>
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="Windows路由表解析"><a href="#Windows路由表解析" class="headerlink" title="Windows路由表解析"></a>Windows路由表解析</h1><blockquote>
 <p>这是我原本在csdn上的博客，现在搬运到这里。</p>
 </blockquote>
 <ul>
@@ -196,70 +197,20 @@
 <h2 id="路由：网络目标255-255-255-255"><a href="#路由：网络目标255-255-255-255" class="headerlink" title="路由：网络目标255.255.255.255"></a>路由：网络目标255.255.255.255</h2><p>  这个<strong>绝对广播路由</strong>，当系统接收到目的网段是这个的数据包时，就会从127.0.0.1，192.168.1.114，169.254.195.240和169.254.255.176这几个接口以广播的形式发出。</p>
 <p><strong><em>如有错误，敬请指正~</em></strong></p>
 
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2020/01/07/RISC-V%E6%B1%87%E7%BC%96%E8%AF%A6%E8%A7%A3%E4%B9%8B%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/">
-                RISC-V汇编详解之基本指令.md
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-01-07</span>
-            
-            
-            
-        </div>
     </div>
 
     
-        <div class="content">
-            <h1 id="RISC-V汇编详解之基本指令"><a href="#RISC-V汇编详解之基本指令" class="headerlink" title=" RISC-V汇编详解之基本指令"></a><div align=center> RISC-V汇编详解之基本指令</div></h1><blockquote>
-<p> <strong><em>前言</em></strong>：<em>之前读CSAPP学了X86汇编，最近又学了RISC-V汇编。X86汇编、RISC-V汇编恰好分别是CISC和RISC的典型代表。因此打算写几篇博客介绍一下RISC-V汇编和X86汇编，然后将二者的特性做一个横向对比。</em></p>
-</blockquote>
-<blockquote>
-<p>这篇文章主要介绍RISC-V汇编的基本指令，主要参考来源为MIT6.004课程<a href="https://6004.mit.edu/web/fall19" target="_blank" rel="noopener">1</a>，以及自己的一些笔记。</p>
-</blockquote>
-<hr>
-<h3 id="RISC-V-ISA"><a href="#RISC-V-ISA" class="headerlink" title="RISC-V ISA"></a>RISC-V ISA</h3><p><strong>1.ISA可以理解为是一种软件和硬件之间的约定。</strong></p>
-<ul>
-<li>规定了运算和存储的位置</li>
-<li>是对软件如何访问硬件的精确描述</li>
-</ul>
-<p><strong>2.RISC-V ISA概述</strong></p>
-<ul>
-<li>一种全新的、开源免费的ISA，源于加州伯克利</li>
-<li>有几种变种：<ul>
-<li>RV32,RV64,RV128三种不同字长</li>
-<li>I：整数指令</li>
-<li>M：乘法和除法指令</li>
-<li>F和D：单精度、双精度浮点数指令</li>
-<li>以及许多其他模块化扩展</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p><strong><em>以下我们以32位字长为例</em></strong></p>
-        </div>
-        <a href="/2020/01/07/RISC-V%E6%B1%87%E7%BC%96%E8%AF%A6%E8%A7%A3%E4%B9%8B%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/" class="read-more">Read More</a>
+
+    
+
+    <!-- Comments -->
     
 
 </div>
-            
         </section>
+
     </div>
 </div>
-
-
-
-
 
 
 </div>
