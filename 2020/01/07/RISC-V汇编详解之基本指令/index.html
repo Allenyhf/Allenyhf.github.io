@@ -10,7 +10,32 @@
 
     <!--Description-->
     
-        <meta name="description" content="为山者，基于一篑之土，以成千丈之峭；凿井者，起于三寸之坎，以就万仞之深">
+        <meta name="description" content="RISC-V汇编详解之基本指令
+ 前言：之前读CSAPP学了X86汇编，最近又学了RISC-V汇编。X86汇编、RISC-V汇编恰好分别是CISC和RISC的典型代表。因此打算写几篇博客介绍一下RISC-V汇编和X86汇编，然后将二者的特性做一个横向对比。
+
+
+这篇文章主要介绍RISC-V汇编的基本指令，主要参考来源为MIT6.004课程1，以及自己的一些笔记。
+
+
+RISC-V ISA1.ISA可以理解为是一种软件和硬件之间的约定。
+
+规定了运算和存储的位置
+是对软件如何访问硬件的精确描述
+
+2.RISC-V ISA概述
+
+一种全新的、开源免费的ISA，源于加州伯克利
+有几种变种：
+RV32,RV64,RV128三种不同字长
+I：整数指令
+M：乘法和除法指令
+F和D：单精度、双精度浮点数指令
+以及许多其他模块化扩展
+
+
+
+
+以下我们以32位字长为例">
     
 
     <!--Author-->
@@ -24,8 +49,6 @@
     
 
     <!--Open Graph Description-->
-    
-        <meta property="og:description" content="为山者，基于一篑之土，以成千丈之峭；凿井者，起于三寸之坎，以就万仞之深" />
     
 
     <!--Open Graph Site Name-->
@@ -561,7 +584,7 @@ x3 -&gt; store(0x10)</code></pre><p><img src="../../../../img/3.png" alt="" titl
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="footer-copyright">
-                    
+                    2020@Allen. All right reserved
                 </div>
             </div>
         </div>
