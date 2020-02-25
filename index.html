@@ -156,60 +156,6 @@
 
     <div class="post-header index">
         <h1 class="title">
-            <a href="/2020/01/08/RISC-V/">
-                RISC-V
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-01-08</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <h1 id="RISC-V汇编详解之？？"><a href="#RISC-V汇编详解之？？" class="headerlink" title=" RISC-V汇编详解之？？"></a><div align=center> RISC-V汇编详解之？？</div></h1><blockquote>
-<p>这篇文章主要介绍RISC-V汇编的？？，主要参考来源为MIT6.004课程[1]，以及自己的一些笔记。</p>
-</blockquote>
-<h2 id="简单表达式的编译过程"><a href="#简单表达式的编译过程" class="headerlink" title="简单表达式的编译过程"></a>简单表达式的编译过程</h2><ul>
-<li>首先，将变量存入寄存器中</li>
-<li>将所作的运算编译成对应的计算指令</li>
-<li>对于小常数，使用R-I指令处理</li>
-<li>对于大常数，使用li伪指令处理</li>
-<li>C例程：<br>int x,y,z;<br>y = (x+3) | (y+123456);<br>z = (x*4)^y;</li>
-<li>对应的RISC-V汇编代码<br>(x:10 y:x11 z:x12<br>x13,x14用于存储临时值)<br>addi x13,x10,3<br>li x14,123456<br>add x14,x11,x14<br>or x11,x13,x14<br>slli x13,x10,2<br>xor x12,x13,x11</li>
-<li>注解：I版本RISC-V没有乘法指令，可以通过左移位实现。如slli x13,x10,2，将x左移2位，从而实现x*4。</li>
-</ul>
-<hr>
-<h2 id="条件表达式"><a href="#条件表达式" class="headerlink" title="条件表达式"></a>条件表达式</h2><p><strong>1.if表达式</strong><br>将if表达式编译成分支结构<br><img src="21.png" alt=""></p>
-<ul>
-<li><p>C例程<br>  int x,y;<br>  …<br>  if(x&lt;y){</p>
-<pre><code>y = y - x;</code></pre><p>  }</p>
-</li>
-<li><p>RISC-V汇编<br>  // x:x10  y:x11<br>  slt x12, x10, x11<br>  beqz x12, endif<br>  sub x11, x11, x10<br>  endif:</p>
-</li>
-<li><p>RISC-V汇编（我们还可以将比较和分支结合起来）<br>bge x10, x11, endif<br>sub x11, x11, x10<br>endif:</p>
-</li>
-<li><p>注解：<strong>“slt x12, x10, x11 ”</strong> 当x（x10）&lt; y(x11)时，x12被置为1；<strong>“beqz x12, endif”</strong> 当x&lt;y不成立时，亦即x&gt;=y,跳转到endif执行。<strong>“bge x10, x11, endif ”</strong> 当x(x10) &gt;= y(x11)时，跳转到endif执行。</p>
-</li>
-</ul>
-<p><strong>2.if-else表达式</strong><br><img src="22.png" alt=""></p>
-<p><strong>3.while表达式</strong><br><img src="23.png" alt=""></p>
-<p><strong>4.while-if嵌套表达式</strong></p>
-
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
             <a href="/2020/01/07/RISC-V%E6%B1%87%E7%BC%96%E8%AF%A6%E8%A7%A3%E4%B9%8B%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/">
                 RISC-V汇编详解之基本指令.md
             </a>
@@ -257,45 +203,6 @@
 
 </div>
             
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2020/01/07/hello-world/">
-                Hello World
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2020-01-07</span>
-            
-            
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-        </div>
-    
-
-</div>
-            
         </section>
     </div>
 </div>
@@ -325,15 +232,7 @@
         <ul>
             
             <li>
-                <a class="footer-post" href="/2020/01/08/RISC-V/">RISC-V</a>
-            </li>
-            
-            <li>
                 <a class="footer-post" href="/2020/01/07/RISC-V%E6%B1%87%E7%BC%96%E8%AF%A6%E8%A7%A3%E4%B9%8B%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4/">RISC-V汇编详解之基本指令.md</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2020/01/07/hello-world/">Hello World</a>
             </li>
             
         </ul>
