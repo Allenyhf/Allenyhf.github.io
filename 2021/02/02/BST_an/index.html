@@ -138,7 +138,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://github.com/Allenyhf/2021/02/02/BST最近公共祖先/">
+  <link rel="canonical" href="https://github.com/Allenyhf/2021/02/02/BST_an/">
   <title>
     
     二叉搜索树最近公共祖先 - Alen | Ordinary yet unique
@@ -330,7 +330,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">854</span> In Total
+              Words <span class="post-count">851</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- 不蒜子统计 start -->
@@ -390,8 +390,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="二叉搜索树最近公共祖先"><a href="#二叉搜索树最近公共祖先" class="headerlink" title="二叉搜索树最近公共祖先"></a>二叉搜索树最近公共祖先</h2><p><img src="BST.png" alt="Question"></p>
-<h2 id="原题链接"><a href="#原题链接" class="headerlink" title="原题链接"></a>原题链接</h2><p><a href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/</a></p>
+        <h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><img src="BST.png" alt="Question"></p>
+<h3 id="原题链接"><a href="#原题链接" class="headerlink" title="原题链接"></a>原题链接</h3><p><a href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/</a></p>
 <h3 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h3><p> 二叉搜索树，由其“搜索某节点，必定先经过其祖先”的特性，可在搜索节点过程中记录下其祖先。如搜索节点4的过程中，即可依次记录下其祖先节点：6 –&gt; 2<br>由于题目需要求解的是最近公共祖先，因此只需对两个节点的祖先进行比对，而从节点本身开始比对，再依次按父节点、祖父节点等等的顺序进行比对，最先匹配的节点便是最近公共祖先。<br>此处，可以使用两个STL的stack放置祖先，因为节点本身也定义为它的祖先，所以节点本身也需要入栈。比对的过程从栈顶开始。<br>但是因为此处使用两个循环进行比对，因此选用一个stack，一个vector。每次从stack中弹出栈顶，再与vector中的元素一一比对，注意vector中元素并不进行删除！</p>
 <p> 笔者最初解题时，搜索节点的主体代码编写如下，性能一般。</p>
 <pre><code>if(t-&gt;val == p-&gt;val)  /* 1 */
@@ -400,7 +400,7 @@ iSt.push(t);
 if(p-&gt;val &lt; t-&gt;val)   /* 2 */
   t = t-&gt;left;
 else
-  t = t-&gt;right;</code></pre><p>考虑到代码重复读取节点的val，每次循环中，第一次读取节点的val后，val可能被放到寄存器和cache中，也可能还在主存中，这可能会限制代码的性能。而且，从汇编层面看，1出判断t-&gt;val与p-&gt;val是否相等的if语句、2处判断二者哪个大的if语句及其分支，这一过程是冗余不必要，因为在汇编中会重复做t-&gt;val 与p-&gt;val的减法运算。因此，可以对代码做以下的优化。</p>
+  t = t-&gt;right;</code></pre><p>考虑到代码重复读取节点的val，每次循环中，第一次读取节点的val后，val可能被放到寄存器和cache中，也可能还在主存中，这可能会限制代码的性能。而且，从汇编层面看，1处判断t-&gt;val与p-&gt;val是否相等的if语句、2处判断二者哪个大的if语句及其分支，这一过程是冗余不必要，因为在汇编中会重复做t-&gt;val 与p-&gt;val的减法运算。因此，可以对代码做以下的优化。</p>
 <pre><code>tmp = p-&gt;val - t-&gt;val;
 if(tmp==0) 
     break;
@@ -411,8 +411,10 @@ else if(tmp&lt;0){
     iSt.push(t);
     t = t-&gt;right;
 }</code></pre><p>以上，分别读取p节点和q节点的val，然后根据减法结果进行分支，避免了不必要的多次读取节点val和汇编层面的反复减法运算。</p>
-<h3 id="优化结果"><a href="#优化结果" class="headerlink" title="优化结果"></a>优化结果</h3><p><img src="./bOp.png" alt="Before optimization"></p>
-<p><img src="./aOp.png" alt="After optimization"></p>
+<h3 id="优化结果"><a href="#优化结果" class="headerlink" title="优化结果"></a>优化结果</h3><ul>
+<li>优化前<br><img src="./bOp.png" alt="Before optimization"></li>
+<li>优化后<br><img src="./aOp.png" alt="After optimization"></li>
+</ul>
 <h3 id="优化理论依据："><a href="#优化理论依据：" class="headerlink" title="优化理论依据："></a>优化理论依据：</h3><ul>
 <li>1.这类优化包括识别要执行多次（例如在循环里）但是计算结果不会改变的计算。  —《深入理解计算机系统》P350</li>
 <li>2.消除不必要的内存引用。  —《深入理解计算机系统》P354</li>
@@ -540,7 +542,7 @@ else if(tmp&lt;0){
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=二叉搜索树最近公共祖先&body=Hi,I found this website and thought you might like it https://github.com/Allenyhf/2021/02/02/BST最近公共祖先/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=二叉搜索树最近公共祖先&body=Hi,I found this website and thought you might like it https://github.com/Allenyhf/2021/02/02/BST_an/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -627,7 +629,7 @@ else if(tmp&lt;0){
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#二叉搜索树最近公共祖先"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">二叉搜索树最近公共祖先</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#原题链接"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">原题链接</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分析："><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">分析：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#优化结果"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">优化结果</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#优化理论依据："><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">优化理论依据：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#具体代码"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">具体代码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#题目"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">题目</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#原题链接"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">原题链接</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分析："><span class="toc-nav-number">3.</span> <span class="toc-nav-text">分析：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#优化结果"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">优化结果</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#优化理论依据："><span class="toc-nav-number">5.</span> <span class="toc-nav-text">优化理论依据：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#具体代码"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">具体代码</span></a></li></ol>
         
         </div>
       </aside>
