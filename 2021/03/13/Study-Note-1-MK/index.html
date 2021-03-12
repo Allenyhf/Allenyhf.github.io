@@ -210,13 +210,6 @@
 
           
           <li>
-            <a href="/archive/">Archives</a>
-          </li>
-          
-          
-
-          
-          <li>
             <a href="/about/">About</a>
           </li>
           
@@ -225,6 +218,13 @@
           
           <li>
             <a href="/categories/">Categories</a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a href="/archive/">Archives</a>
           </li>
           
           
@@ -390,8 +390,10 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>###在Unix环境下，将原先静态链接目标（.a），重新编译链接生成动态链接库(.so)时，项目使用GNU make，产生如下报错：”/usr/bin/ld: ex.o: relocation R_X86_64_32 against `.rodata’ can not be used when making a shared object; recompile with -fPIC”<br><img src="./error.png" alt="error"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><h3 id="经过反复查验，发现makefile编写无误，确实使用了-fPIC的编译选项。问题关键在于，由于笔者没有显示地（explicitly）将中间目标-o文件删除、进行重新编译。由于编译链接成动态链接库需要将源代码-c文件生成位置无关代码（PIC），即Position-Independent-Code，gcc使用的即是fPIC编译链接选项。然而，先前使用的是静态链接，生成的-o文件并非PIC。关于PIC及静态库、动态库的相关知识可参见《Computer-System：A-Programmer’s-Perspective》一书第七章。而GNU-make对于未更新的-o文件不做重新编译，因此报错。"><a href="#经过反复查验，发现makefile编写无误，确实使用了-fPIC的编译选项。问题关键在于，由于笔者没有显示地（explicitly）将中间目标-o文件删除、进行重新编译。由于编译链接成动态链接库需要将源代码-c文件生成位置无关代码（PIC），即Position-Independent-Code，gcc使用的即是fPIC编译链接选项。然而，先前使用的是静态链接，生成的-o文件并非PIC。关于PIC及静态库、动态库的相关知识可参见《Computer-System：A-Programmer’s-Perspective》一书第七章。而GNU-make对于未更新的-o文件不做重新编译，因此报错。" class="headerlink" title="经过反复查验，发现makefile编写无误，确实使用了-fPIC的编译选项。问题关键在于，由于笔者没有显示地（explicitly）将中间目标.o文件删除、进行重新编译。由于编译链接成动态链接库需要将源代码.c文件生成位置无关代码（PIC），即Position Independent Code，gcc使用的即是fPIC编译链接选项。然而，先前使用的是静态链接，生成的.o文件并非PIC。关于PIC及静态库、动态库的相关知识可参见《Computer System：A Programmer’s Perspective》一书第七章。而GNU make对于未更新的.o文件不做重新编译，因此报错。"></a>经过反复查验，发现makefile编写无误，确实使用了-fPIC的编译选项。问题关键在于，由于笔者没有显示地（explicitly）将中间目标.o文件删除、进行重新编译。由于编译链接成动态链接库需要将源代码.c文件生成位置无关代码（PIC），即Position Independent Code，gcc使用的即是fPIC编译链接选项。然而，先前使用的是静态链接，生成的.o文件并非PIC。关于PIC及静态库、动态库的相关知识可参见《Computer System：A Programmer’s Perspective》一书第七章。而GNU make对于未更新的.o文件不做重新编译，因此报错。</h3><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><h3 id="因此，解决方法就是将中间目标全部删除，重新执行make。可见，编写make时，养成编写clean选项是一个必要的好习惯。而将项目从静态链接库转变成动态链接库时，也需要手动显示地make-clean。"><a href="#因此，解决方法就是将中间目标全部删除，重新执行make。可见，编写make时，养成编写clean选项是一个必要的好习惯。而将项目从静态链接库转变成动态链接库时，也需要手动显示地make-clean。" class="headerlink" title="因此，解决方法就是将中间目标全部删除，重新执行make。可见，编写make时，养成编写clean选项是一个必要的好习惯。而将项目从静态链接库转变成动态链接库时，也需要手动显示地make clean。"></a>因此，解决方法就是将中间目标全部删除，重新执行make。可见，编写make时，养成编写clean选项是一个必要的好习惯。而将项目从静态链接库转变成动态链接库时，也需要手动显示地make clean。</h3>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在Unix环境下，将原先静态链接目标（.a），重新编译链接生成动态链接库(.so)时，项目使用GNU make，产生如下报错：”/usr/bin/ld: ex.o: relocation R_X86_64_32 against `.rodata’ can not be used when making a shared object; recompile with -fPIC”<br><img src="./error.png" alt="error"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>经过反复查验，发现makefile编写无误，确实使用了-fPIC的编译选项。<br>问题关键在于，由于笔者没有显示地（explicitly）将中间目标.o文件删除、进行重新编译。由于编译链接成动态链接库需要将源代码.c文件生成位置无关代码（PIC），即Position Independent Code，gcc使用的即是fPIC编译链接选项。然而，先前使用的是静态链接，生成的.o文件并非PIC。<br>关于PIC及静态库、动态库的相关知识可参见《Computer System：A Programmer’s Perspective》一书第七章。而GNU make对于未更新的.o文件不做重新编译，因此报错。  </p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>因此，解决方法就是将中间目标全部删除，重新执行make。可见，编写make时，养成编写clean选项是一个必要的好习惯。而将项目从静态链接库转变成动态链接库时，也需要手动显示地make clean。</p>
+
 
         <hr>
         <!-- Pager -->
@@ -529,7 +531,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#背景"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">背景</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#分析"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">分析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#经过反复查验，发现makefile编写无误，确实使用了-fPIC的编译选项。问题关键在于，由于笔者没有显示地（explicitly）将中间目标-o文件删除、进行重新编译。由于编译链接成动态链接库需要将源代码-c文件生成位置无关代码（PIC），即Position-Independent-Code，gcc使用的即是fPIC编译链接选项。然而，先前使用的是静态链接，生成的-o文件并非PIC。关于PIC及静态库、动态库的相关知识可参见《Computer-System：A-Programmer’s-Perspective》一书第七章。而GNU-make对于未更新的-o文件不做重新编译，因此报错。"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">经过反复查验，发现makefile编写无误，确实使用了-fPIC的编译选项。问题关键在于，由于笔者没有显示地（explicitly）将中间目标.o文件删除、进行重新编译。由于编译链接成动态链接库需要将源代码.c文件生成位置无关代码（PIC），即Position Independent Code，gcc使用的即是fPIC编译链接选项。然而，先前使用的是静态链接，生成的.o文件并非PIC。关于PIC及静态库、动态库的相关知识可参见《Computer System：A Programmer’s Perspective》一书第七章。而GNU make对于未更新的.o文件不做重新编译，因此报错。</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#解决"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">解决</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#因此，解决方法就是将中间目标全部删除，重新执行make。可见，编写make时，养成编写clean选项是一个必要的好习惯。而将项目从静态链接库转变成动态链接库时，也需要手动显示地make-clean。"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">因此，解决方法就是将中间目标全部删除，重新执行make。可见，编写make时，养成编写clean选项是一个必要的好习惯。而将项目从静态链接库转变成动态链接库时，也需要手动显示地make clean。</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#背景"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">背景</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#分析"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">分析</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#解决"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">解决</span></a></li></ol>
         
         </div>
       </aside>

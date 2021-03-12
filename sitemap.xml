@@ -37,14 +37,14 @@
   </url>
   
   <url>
-    <loc>https://github.com/Allenyhf/archive/index.html</loc>
+    <loc>https://github.com/Allenyhf/categories/index.html</loc>
     
     <lastmod>2021-01-25</lastmod>
     
   </url>
   
   <url>
-    <loc>https://github.com/Allenyhf/categories/index.html</loc>
+    <loc>https://github.com/Allenyhf/archive/index.html</loc>
     
     <lastmod>2021-01-25</lastmod>
     
@@ -67,14 +67,14 @@
 
   
   <url>
-    <loc>https://github.com/Allenyhf/tags/LeetCode/</loc>
+    <loc>https://github.com/Allenyhf/tags/makefile/</loc>
     <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://github.com/Allenyhf/tags/makefile/</loc>
+    <loc>https://github.com/Allenyhf/tags/LeetCode/</loc>
     <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -97,14 +97,14 @@
 
   
   <url>
-    <loc>https://github.com/Allenyhf/categories/LeetCode/</loc>
+    <loc>https://github.com/Allenyhf/categories/Note/</loc>
     <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://github.com/Allenyhf/categories/Note/</loc>
+    <loc>https://github.com/Allenyhf/categories/LeetCode/</loc>
     <lastmod>2021-03-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
