@@ -210,13 +210,6 @@
 
           
           <li>
-            <a href="/about/">About</a>
-          </li>
-          
-          
-
-          
-          <li>
             <a href="/archive/">Archives</a>
           </li>
           
@@ -225,6 +218,13 @@
           
           <li>
             <a href="/categories/">Categories</a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a href="/about/">About</a>
           </li>
           
           
@@ -383,6 +383,46 @@
   
 
 
+  <a href="/2021/03/02/Study-Note-1-MK/">
+    <h2 class="post-title">
+      学习笔记-makefile-小细节
+    </h2>
+    <h3 class="post-subtitle">
+      生成动态链接库过程中，导致报错“relocation R_X86_64_32 against rodata”的小疏忽
+    </h3>
+    <div class="post-content-preview">
+      背景###在Unix环境下，将原先静态链接目标（.a），重新编译链接生成动态链接库(.so)时，项目使用GNU make，产生如下报错：”/usr/bin/ld: ex.o: relocation R_X86_64_32 against `.rodata’ can not be used when making a shared object; recompile with -fPIC”
+分......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Alen on
+    2021-03-02
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#makefile" title="makefile">makefile</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
+
   <a href="/2021/02/02/BST_an/">
     <h2 class="post-title">
       二叉搜索树最近公共祖先
@@ -511,6 +551,10 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
     <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="1">Hexo-Theme-LiveMyLife</a>
     
     
+    
+    <a href="/tags/#makefile" title="makefile" rel="1">makefile</a>
+    
+    
   </div>
 </section>
 
@@ -569,6 +613,10 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
 <div class="widget">
   <ul>
     
+    <a href="2021/03/02/Study-Note-1-MK/">
+      <li>学习笔记-makefile-小细节</li>
+    </a>
+    
     <a href="2021/02/02/BST_an/">
       <li>二叉搜索树最近公共祖先</li>
     </a>
@@ -587,7 +635,7 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
     <!-- <h5>ARCHIVES</h5> -->
     <h5><a href="/archives/">ARCHIVES</a></h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
 
@@ -606,6 +654,10 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
     
     <a href="/categories/#Hexo-Theme-LiveMyLife">
       <li>Hexo-Theme-LiveMyLife</li>
+    </a>
+    
+    <a href="/categories/#Note">
+      <li>Note</li>
     </a>
     
   </ul>
