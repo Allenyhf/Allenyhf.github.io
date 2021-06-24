@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://github.com/Allenyhf/2021/06/24/UCB-CS162-HW0-SUM/</loc>
+    
+    <lastmod>2021-06-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://github.com/Allenyhf/2021/03/13/Study-Note-1-MK/</loc>
     
     <lastmod>2021-03-12</lastmod>
@@ -37,14 +44,14 @@
   </url>
   
   <url>
-    <loc>https://github.com/Allenyhf/categories/index.html</loc>
+    <loc>https://github.com/Allenyhf/archive/index.html</loc>
     
     <lastmod>2021-01-25</lastmod>
     
   </url>
   
   <url>
-    <loc>https://github.com/Allenyhf/archive/index.html</loc>
+    <loc>https://github.com/Allenyhf/categories/index.html</loc>
     
     <lastmod>2021-01-25</lastmod>
     
@@ -60,36 +67,43 @@
 
   <url>
     <loc>https://github.com/Allenyhf</loc>
-    <lastmod>2021-03-12</lastmod>
+    <lastmod>2021-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://github.com/Allenyhf/tags/makefile/</loc>
-    <lastmod>2021-03-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://github.com/Allenyhf/tags/LeetCode/</loc>
-    <lastmod>2021-03-12</lastmod>
+    <lastmod>2021-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/Allenyhf/tags/Hexo/</loc>
-    <lastmod>2021-03-12</lastmod>
+    <lastmod>2021-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/Allenyhf/tags/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2021-03-12</lastmod>
+    <lastmod>2021-06-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/Allenyhf/tags/makefile/</loc>
+    <lastmod>2021-06-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/Allenyhf/tags/OS/</loc>
+    <lastmod>2021-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -97,22 +111,29 @@
 
   
   <url>
-    <loc>https://github.com/Allenyhf/categories/Note/</loc>
-    <lastmod>2021-03-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://github.com/Allenyhf/categories/LeetCode/</loc>
-    <lastmod>2021-03-12</lastmod>
+    <lastmod>2021-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://github.com/Allenyhf/categories/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2021-03-12</lastmod>
+    <lastmod>2021-06-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/Allenyhf/categories/Note/</loc>
+    <lastmod>2021-06-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/Allenyhf/categories/Course/</loc>
+    <lastmod>2021-06-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

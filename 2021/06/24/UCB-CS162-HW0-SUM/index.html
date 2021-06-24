@@ -71,12 +71,12 @@
 
   <!-- Pygments Highlight CSS -->
   
-<link rel="stylesheet" href="../css/highlight.css">
-<link rel="stylesheet" href="../css/widget.css">
-<link rel="stylesheet" href="../css/rocket.css">
-<link rel="stylesheet" href="../css/signature.css">
-<link rel="stylesheet" href="../css/catalog.css">
-<link rel="stylesheet" href="../css/livemylife.css">
+<link rel="stylesheet" href="../../../../css/highlight.css">
+<link rel="stylesheet" href="../../../../css/widget.css">
+<link rel="stylesheet" href="../../../../css/rocket.css">
+<link rel="stylesheet" href="../../../../css/signature.css">
+<link rel="stylesheet" href="../../../../css/catalog.css">
+<link rel="stylesheet" href="../../../../css/livemylife.css">
 
 
   
@@ -138,10 +138,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://github.com/Allenyhf/about/">
+  <link rel="canonical" href="https://github.com/Allenyhf/2021/06/24/UCB-CS162-HW0-SUM/">
   <title>
     
-    About - Alen | Ordinary yet unique
+    UCB-CS162 - Alen | Ordinary yet unique
     
   </title>
 <meta name="generator" content="Hexo 4.2.1"></head>
@@ -289,8 +289,8 @@
 
   <style type="text/css">
     header.intro-header {
-       /*page*/
-        background-image: url('/img/scenery/about_bg.jpg');
+       /*post*/
+        background-image: url('/img/header_img/15.jpg');
       
     }
 
@@ -308,10 +308,40 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>About</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">Let life be beautiful like summer flowers</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#OS" title="OS">OS</a>
+              
+            </div>
+            <h1>UCB-CS162</h1>
+            <h2 class="subheading">HOMEWORK0 小结</h2>
+            <span class="meta">
+              Posted by Alen on
+              2021-06-24
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">2</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">553</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- 不蒜子统计 start -->
+            <span class="meta">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            <!-- WordCount end -->
+            
+
+
           </div>
           
         </div>
@@ -352,218 +382,306 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-	<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+	<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-
-      <h2 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h2><blockquote>
-<p><strong>95后 2020年本科毕业于 福州大学(211工程) 物联网工程专业</strong><br><strong>曾获2017年中国机器人大赛三等奖、金砖国家第二届青年创客大赛二等奖</strong><br><strong>本科期间曾担任福大电子爱好者学社副社长</strong><br><strong>英语水平 CET-6 (2016高考全国 I 卷英语140分)</strong><br><strong>魔方爱好者，玩过的最高阶十阶魔方，自创3个三阶魔方公式</strong></p>
+        <blockquote>
+<p><strong><em>前言</em></strong>：完成了加州伯克利OS课程的第一个Homework hw0，这里做一小结，并给出自己完成的Written Question的答案。（由于162的课程Policy，代码暂不给出）</p>
 </blockquote>
-<h2 id="About-this-site"><a href="#About-this-site" class="headerlink" title="About this site"></a>About this site</h2><blockquote>
-<p><strong>Record my learning process on computer science</strong><br><strong>Share hobbies 、drips and draps of my life</strong></p>
+<hr>
+<h3 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h3><blockquote>
+<h4 id="Principle："><a href="#Principle：" class="headerlink" title="Principle："></a>Principle：</h4><blockquote>
+<p><strong><a href="https://ocw.mit.edu/ans7870/6/6.005/s16/classes/03-testing/index.html" target="_blank" rel="noopener">MIT 6.005 Software Construction Testing</a>中给出了构造完备测试输入的方法</strong><br><strong>choose test cases by partitinoing</strong><br>    <strong>1. divide input space into subdomains</strong><br>    <strong>2. include boundaries in the partition</strong></p>
 </blockquote>
-<h2 id="Contact-me"><a href="#Contact-me" class="headerlink" title="Contact me"></a>Contact me</h2><blockquote>
-<p><strong>Email：<a href="mailto:Valencia_yhf@163.com">Valencia_yhf@163.com</a></strong></p>
+<h4 id="增加测试"><a href="#增加测试" class="headerlink" title="增加测试"></a>增加测试</h4><p>由于课程提供的test file只有一个，因此，我根据上述方法额外构造了三个测试文件</p>
+<blockquote>
+<p><strong>单行文件</strong><br><strong>仅含换行的文件</strong><br><strong>空文件</strong></p>
 </blockquote>
-
-
-      <!-- 如果开启评论功能 -->
-      
-      <hr>
-
-      
-
-      
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        
-<!-- <h5>VISITORS</h5> -->
-<h5><a href="/">VISITORS</a></h5>
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
+</blockquote>
+<h3 id="words"><a href="#words" class="headerlink" title="words"></a>words</h3><blockquote>
+<h4 id="num-words函数"><a href="#num-words函数" class="headerlink" title="num_words函数"></a>num_words函数</h4><blockquote>
+<p><strong>不难实现，注意检查infile为空的情形</strong> </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<h4 id="count-words函数"><a href="#count-words函数" class="headerlink" title="count_words函数"></a>count_words函数</h4><blockquote>
+<p><strong>注意读入一个word完毕后，末尾添加’\0’后，再add_word</strong><br><strong>切记补充main函数</strong> </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<h4 id="word-count-c文件"><a href="#word-count-c文件" class="headerlink" title="word_count.c文件"></a>word_count.c文件</h4><blockquote>
+<h5 id="注意add-word函数中"><a href="#注意add-word函数中" class="headerlink" title="注意add_word函数中"></a>注意add_word函数中</h5><blockquote>
+<p><strong>区分首次和之后add_word的处理。本质上就是空链表首次添加元素和非空链表添加元素的区别</strong><br><strong>注意为struct word_count动态分配/malloc 内存后，再进行word的copy</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="gdb调试技巧"><a href="#gdb调试技巧" class="headerlink" title="gdb调试技巧"></a>gdb调试技巧</h3><blockquote>
+<p><strong>直接run一次，再通过backtrace定位bug</strong></p>
+</blockquote>
+<h3 id="Written-quetion-in-section-“compiling-assembling-and-linking”"><a href="#Written-quetion-in-section-“compiling-assembling-and-linking”" class="headerlink" title="Written quetion in section “compiling, assembling and linking”"></a>Written quetion in section “compiling, assembling and linking”</h3><blockquote>
+<ol>
+<li>Generate recurse.S and find which instruction(s) corresponds to the recursive call of recur(i-1).<br>Answer:<br> <strong>movl    8(%ebp), %eax</strong><br> <strong>subl    $1, %eax</strong><br> <strong>subl    $12, %esp</strong><br> <strong>pushl    %eax</strong><br> <strong>call    recur</strong></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>What do the .text and .data section contain?<br>Answer:<br> <strong>The .text section contains the code, namely instructions in binary format.</strong><br> <strong>The .data section contains the initialized static and global variables.</strong></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>What command do we use to view the symbols in an ELF file? (Hint: We can use objdump again,look at “man objdump” to find the right flag).<br>Answer:<br> <strong>objdump –syms [file]</strong><br> <strong>objdump –syms map.obj</strong></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>What do the g, O, F, and <em>UND</em> flags mean?<br>Answer:<br> <strong>g: the symbol is global.</strong><br> <strong>O: The symbol is the name of an object</strong><br> <strong>F: The symbol is the name of a function</strong><br> <strong><em>UND</em>: the symbol is refrenced but not defined in the dumped file</strong></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Vaguely describe another location where we can find the symbol for malloc.<br>Answer:<br> <strong>In libc.obj</strong></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>Where else can we find a symbol for recur? Which file is this in? Copy and paste the relevant portion of the symbol table.<br>Answer:<br> <strong>We can also find a symbol for “recur” in generated file of recurse.c</strong><br> <strong>It is in recurse.obj.</strong><br> <strong>00000000 g     F .text    00000052 recur</strong></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="7">
+<li>Examine the symbol table of the entire map program now. What has changed?<br>Answer:<br> <strong>The symbol table of map combine the one of map.obj and recurse.obj</strong><br> <strong>The first column of symbol table is no longer all zero now. In fact, the first line is the virtual address needed when loading.</strong></li>
+</ol>
+</blockquote>
+<hr>
+<p><strong><em>如有错误，望批评指正!</em></strong><br><strong><em>转载请注明来源，谢谢</em></strong></p>
+<p><img src="./attachments/1578298112904.drawio.html" alt="Diagram"></p>
+<hr>
 
 
         <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/2021/03/13/Study-Note-1-MK/" data-toggle="tooltip" data-placement="top" title="学习笔记-makefile-小细节">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <div class="tip">
+          <p>
+            If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+          </p>
+        </div>
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=UCB-CS162&body=Hi,I found this website and thought you might like it https://github.com/Allenyhf/2021/06/24/UCB-CS162-HW0-SUM/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+<!-- gitalk start -->
+<!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+<div id="gitalk-container"></div>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+<script src="/js/comment/gitalk.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: '',
+    id: 'Thu Jun 24 2021 18:53:00 GMT+0800', // Ensure uniqueness and length less than 50
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 10 ,
+    pagerDirection: 'last',
+    createIssueManually: false ,
+    language: 'en'
+  });
+  gitalk.render('gitalk-container');
+
+  var gtFolded = () => {
+    setTimeout(function() {
+      let markdownBody = document.getElementsByClassName("markdown-body");
+      let list = Array.from(markdownBody);
+      list.forEach(item => {
+        if (item.clientHeight > 250) {
+          item.classList.add('gt-comment-body-folded');
+          item.style.maxHeight = '250px';
+          item.title = 'Click to Expand';
+          item.onclick = function() {
+            item.classList.remove('gt-comment-body-folded');
+            item.style.maxHeight = '';
+            item.title = '';
+            item.onclick = null;
+          };
+        }
+      })
+    }, 800);
+  }
+</script>
+
+<!-- gitalk end -->
+
+
+
+<!-- 2. gitment comment -->
+
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Test"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Test</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Principle："><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Principle：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#增加测试"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">增加测试</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#words"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">words</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#num-words函数"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">num_words函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#count-words函数"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">count_words函数</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#word-count-c文件"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">word_count.c文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#注意add-word函数中"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">注意add_word函数中</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#gdb调试技巧"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">gdb调试技巧</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Written-quetion-in-section-“compiling-assembling-and-linking”"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Written quetion in section “compiling, assembling and linking”</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
         <!-- Featured Tags -->
-
-<section>
-  <!-- no hr -->
-  <h5><a href="/tags/">FEATURED TAGS</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#LeetCode" title="LeetCode" rel="1">LeetCode</a>
-    
-    
-    
-    <a href="/tags/#Hexo" title="Hexo" rel="1">Hexo</a>
-    
-    
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="1">Hexo-Theme-LiveMyLife</a>
-    
-    
-    
-    <a href="/tags/#makefile" title="makefile" rel="1">makefile</a>
-    
-    
-    
-    <a href="/tags/#OS" title="OS" rel="1">OS</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">ABOUT ME</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/figure.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/Allenyhf">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
         
-<!-- <h5>RECENT POSTS</h5> -->
-<h5><a href="/">RECENT POSTS</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../2021/06/24/UCB-CS162-HW0-SUM/">
-      <li>UCB-CS162</li>
-    </a>
-    
-    <a href="../2021/03/13/Study-Note-1-MK/">
-      <li>学习笔记-makefile-小细节</li>
-    </a>
-    
-    <a href="../2021/02/02/BST_an/">
-      <li>二叉搜索树最近公共祖先</li>
-    </a>
-    
-    <a href="../2020/04/17/Hexo-Theme-LiveMyLife/">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#OS" title="OS">OS</a>
+            
+          </div>
+        </section>
         
-    <!-- <h5>ARCHIVES</h5> -->
-    <h5><a href="/archives/">ARCHIVES</a></h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/06/">June 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li></ul>
+
+        <!-- Friends Blog -->
+        
+      </div>
     </div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<!-- <h5>categories</h5> -->
-<h5><a href="/categories/">CATEGORIES</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#LeetCode">
-      <li>LeetCode</li>
-    </a>
-    
-    <a href="/categories/#Hexo-Theme-LiveMyLife">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
-    <a href="/categories/#Note">
-      <li>Note</li>
-    </a>
-    
-    <a href="/categories/#Course">
-      <li>Course</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-</div>
-
-    
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 	<!-- Footer (contains ThemeColor、viewer) -->
